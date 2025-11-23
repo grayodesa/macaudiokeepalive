@@ -17,6 +17,11 @@
 		336F74651E07E4F6009BCC1B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336F74641E07E4F6009BCC1B /* CoreAudio.framework */; };
 		33E521FF1FC61611004927FE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E521FD1FC61611004927FE /* icon.png */; };
 		33E522001FC61611004927FE /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E521FE1FC61611004927FE /* icon@2x.png */; };
+		AA1111111111111111111111 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2222221111111111111111 /* SettingsManager.m */; };
+		AA3333331111111111111111 /* AudioScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4444441111111111111111 /* AudioScheduler.m */; };
+		AA5555551111111111111111 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6666661111111111111111 /* AudioController.m */; };
+		AA7777771111111111111111 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8888881111111111111111 /* PreferencesWindowController.m */; };
+		AA9999991111111111111111 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAAAAA11111111111111111 /* PreferencesWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,15 @@
 		336F74641E07E4F6009BCC1B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		33E521FD1FC61611004927FE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		33E521FE1FC61611004927FE /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		AA1111221111111111111111 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
+		AA2222221111111111111111 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
+		AA3333441111111111111111 /* AudioScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioScheduler.h; sourceTree = "<group>"; };
+		AA4444441111111111111111 /* AudioScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioScheduler.m; sourceTree = "<group>"; };
+		AA5555661111111111111111 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		AA6666661111111111111111 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		AA7777881111111111111111 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		AA8888881111111111111111 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		AAAAAAA11111111111111111 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +82,18 @@
 		336F744A1E07E136009BCC1B /* Mac Audio Keepalive */ = {
 			isa = PBXGroup;
 			children = (
-				336F74601E07E4CC009BCC1B /* WavePlayer.h */,
-				336F74611E07E4CC009BCC1B /* WavePlayer.m */,
 				336F744B1E07E136009BCC1B /* AppDelegate.h */,
 				336F744C1E07E136009BCC1B /* AppDelegate.m */,
+				336F74601E07E4CC009BCC1B /* WavePlayer.h */,
+				336F74611E07E4CC009BCC1B /* WavePlayer.m */,
+				AA1111221111111111111111 /* SettingsManager.h */,
+				AA2222221111111111111111 /* SettingsManager.m */,
+				AA3333441111111111111111 /* AudioScheduler.h */,
+				AA4444441111111111111111 /* AudioScheduler.m */,
+				AA5555661111111111111111 /* AudioController.h */,
+				AA6666661111111111111111 /* AudioController.m */,
+				AA7777881111111111111111 /* PreferencesWindowController.h */,
+				AA8888881111111111111111 /* PreferencesWindowController.m */,
 				336F744E1E07E136009BCC1B /* Supporting Files */,
 			);
 			path = "Mac Audio Keepalive";
@@ -84,6 +106,7 @@
 				33E521FE1FC61611004927FE /* icon@2x.png */,
 				336F74511E07E136009BCC1B /* Assets.xcassets */,
 				336F74531E07E136009BCC1B /* MainMenu.xib */,
+				AAAAAAA11111111111111111 /* PreferencesWindow.xib */,
 				336F74561E07E136009BCC1B /* Info.plist */,
 				3319A9E81E085353005DB79C /* LICENSE */,
 				3319A9E91E085353005DB79C /* README.md */,
@@ -131,7 +154,7 @@
 				TargetAttributes = {
 					336F74471E07E136009BCC1B = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = KAX983KY52;
+						DevelopmentTeam = L43BB2SK58;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -146,6 +169,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -167,6 +191,7 @@
 				33E521FF1FC61611004927FE /* icon.png in Resources */,
 				336F74521E07E136009BCC1B /* Assets.xcassets in Resources */,
 				336F74551E07E136009BCC1B /* MainMenu.xib in Resources */,
+				AA9999991111111111111111 /* PreferencesWindow.xib in Resources */,
 				3319A9EA1E085353005DB79C /* LICENSE in Resources */,
 				33E522001FC61611004927FE /* icon@2x.png in Resources */,
 			);
@@ -183,6 +208,10 @@
 				336F74501E07E136009BCC1B /* main.m in Sources */,
 				3319A9EB1E085353005DB79C /* README.md in Sources */,
 				336F744D1E07E136009BCC1B /* AppDelegate.m in Sources */,
+				AA1111111111111111111111 /* SettingsManager.m in Sources */,
+				AA3333331111111111111111 /* AudioScheduler.m in Sources */,
+				AA5555551111111111111111 /* AudioController.m in Sources */,
+				AA7777771111111111111111 /* PreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +233,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -240,10 +273,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "arm64 x86_64";
 			};
 			name = Debug;
 		};
@@ -251,6 +285,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -281,9 +319,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
+				VALID_ARCHS = "arm64 x86_64";
 			};
 			name = Release;
 		};
@@ -294,10 +334,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KAX983KY52;
+				DEVELOPMENT_TEAM = L43BB2SK58;
 				INFOPLIST_FILE = "Mac Audio Keepalive/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.milgra.oapka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -310,10 +350,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KAX983KY52;
+				DEVELOPMENT_TEAM = L43BB2SK58;
 				INFOPLIST_FILE = "Mac Audio Keepalive/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.milgra.oapka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

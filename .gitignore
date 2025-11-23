@@ -60,3 +60,8 @@ fastlane/screenshots
 iOSInjectionProject/
 Mac Audio Keepalive.xcodeproj/project.xcworkspace/
 Mac Audio Keepalive.xcodeproj/xcshareddata/
+.DS_Store
+.serena
+.claude
+logs.txt
+Build*.txt
